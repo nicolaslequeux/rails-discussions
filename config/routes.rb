@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
   
-  resources :discussions
+  resources :channels
+  
+  resources :discussions do
+
+    # to nest replies inside discussions + right path  
+    resources :replies
+  
+  end
+
   
   # root to: "home#index"
   root to: "discussions#index"
