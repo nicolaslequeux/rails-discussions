@@ -6,5 +6,6 @@ class Discussion < ApplicationRecord
   has_many :replies, dependent: :destroy
 
   validates :title, :content, presence: true
+  resourcify
 
 end

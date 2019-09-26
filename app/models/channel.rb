@@ -4,5 +4,6 @@ class Channel < ApplicationRecord
 
   # this is how we create a jointable...
   has_many :users, through: :discussions
+  resourcify
 
 end
